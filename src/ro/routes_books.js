@@ -1,3 +1,5 @@
+const {BOOKENDPOINT} = require('../utils/app_const');
+
 const {
     addBooksHandler,
     getBooksHandler,
@@ -10,27 +12,27 @@ const {
 const Routes = [
     {
       method: 'POST',
-      path: '/books',
+      path: BOOKENDPOINT,
       handler: addBooksHandler,
     },
     {
       method: 'GET',
-      path: '/books',
+      path: BOOKENDPOINT,
       handler: getBooksHandler,
     },
     {
       method: 'GET',
-      path: '/books/{bookId}',
+      path:  BOOKENDPOINT+'/{bookId}',
       handler: getBooksByIdHandler,
     },
     {
       method: 'PUT',
-      path: '/books/{bookId}',
+      path: BOOKENDPOINT+'/{bookId}',
       handler: editBooksByIdHandler,
     },
     {
       method: 'DELETE',
-      path: '/books/{bookId}',
+      path: BOOKENDPOINT+ '/{bookId}',
       handler: deleteBooksByIdHandler,
     },
   ];
